@@ -1,0 +1,8 @@
+<main >
+    <h1>Next time you play, you should try out:</h1>
+    <div id="content" *ngIf="champion">
+      <h2>{{ champion.name }} - {{ champion.title }}</h2>
+      <img [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champion.id + '_0.jpg'" alt="{{champion.name}}">
+      <p>{{ champion.lore }}</p>
+    </div>
+</main>

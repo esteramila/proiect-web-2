@@ -1,0 +1,20 @@
+<main>
+    <h1>What champion would you like to know more about?</h1>
+    <div id="content" >
+        <div id="search">
+            <mat-form-field class="example-full-width">
+                <mat-label>Champion</mat-label>
+                <input matInput [(ngModel)]="searchTerm" (input)="search()" placeholder="Garen">
+            </mat-form-field>
+        </div>
+      <div class="champion-grid" > <!-- *ngIf="champion" -->
+        <div class="champion-card" *ngFor="let champion of filteredData; trackBy: trackById">
+          <img [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/' + champion.id + '_0.jpg'" alt="{{champion.name}}">
+          <div class="champion-info">
+            <a mat-button [routerLink]="['/champion', champion.id]">{{ champion.name }}</a>
+            <p>{{ champion.title }}</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </main>

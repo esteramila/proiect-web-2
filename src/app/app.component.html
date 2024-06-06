@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="sidenav.toggle()" id="menu-icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span id="menu-title"><img src="/assets/images/riot_logo.jpg" alt="riot">VChampion</span>
+  <a mat-button href="/home" class="top-menu-item"><mat-icon>home</mat-icon>Home</a>
+  <!-- <a mat-button href="/sign-in" class="top-menu-item"><mat-icon>person</mat-icon>SignIn</a>
+  <a mat-button href="/favorites" class="top-menu-item"><mat-icon>favorite</mat-icon>Favorites</a> -->
+  <a mat-button href="/search" class="top-menu-item"><mat-icon>search</mat-icon>Search Champion</a>
+  <a mat-button href="/votes" class="top-menu-item"><mat-icon>star_half</mat-icon>Votes</a>
+  <a mat-button href="/random-champion" class="top-menu-item"><mat-icon>face</mat-icon>Feeling lucky</a>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="64" mode="over">
+    <div class="side-nav-items">
+      <div><a mat-button href="/home" class="side-menu-item"><mat-icon>home</mat-icon>Home</a></div>
+      <!-- <div><a mat-button href="/sign-in" class="side-menu-item"><mat-icon>person</mat-icon>SignIn</a></div>
+      <div><a mat-button href="/favorites" class="side-menu-item"><mat-icon>favorite</mat-icon>Favorites</a></div> -->
+      <div><a mat-button href="/search" class="side-menu-item"><mat-icon>search</mat-icon>Search Champion</a></div>
+      <div><a mat-button href="/votes" class="side-menu-item"><mat-icon>star_half</mat-icon>Votes</a></div>
+      <div><a mat-button href="/random-champion" class="side-menu-item"><mat-icon>face</mat-icon>Feeling lucky</a></div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

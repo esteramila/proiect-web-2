@@ -1,0 +1,14 @@
+<main>
+  <h1>Champions</h1>
+  <section id="content" >
+    <div class="champion-grid">
+      <div class="champion-card" *ngFor="let champion of data; trackBy: trackById">
+        <img [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/' + champion.id + '_0.jpg'" alt="{{champion.name}}">
+        <div class="champion-info">
+          <a mat-button [routerLink]="['/champion', champion.id]">{{ champion.name }}</a>
+          <p>{{ champion.title }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

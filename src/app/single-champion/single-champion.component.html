@@ -1,0 +1,16 @@
+<main *ngIf="champion">
+    <h1>{{ champion.name }} - {{ champion.title }}</h1>
+    <div id="content">
+      <img [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champion.id + '_0.jpg'" alt="{{champion.name}}">
+      <p>{{ champion.lore }}</p>
+      <div id="vote">
+        <button mat-icon-button (click)="handleLikeClick(champion.id)" [class.clicked]="likeClicked">
+          <mat-icon>thumb_up</mat-icon>
+        </button>
+        
+        <button mat-icon-button (click)="handleDislikeClick(champion.id)" [class.clicked]="dislikeClicked">
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+      </div>
+    </div>
+</main>

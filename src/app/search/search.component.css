@@ -1,0 +1,98 @@
+main {
+    overflow: auto;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+h1{
+    font-size: 25px;
+    text-align: center;
+    margin: 20px 0;
+    padding: 5px;
+    box-shadow: 0px 0px 20px #AD1457;
+}
+
+#content{
+    width: 60%; 
+    margin: 60px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0px 0px 10px #B0BEC5; /* #AD1457 */
+}
+
+#search{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /*margin: 5px 5px;*/
+    /* padding: 10px; */
+    /*box-shadow: 0px 0px 20px #AD1457;*/
+}
+
+
+
+.champion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between grid items */
+    padding: 20px; /* Padding around the grid */
+  }
+
+  @media (max-width: 600px) {
+    .champion-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted column width for smaller screens */
+      gap: 10px; /* Smaller gap between grid items */
+      padding: 10px; /* Less padding around the grid */
+    }
+}
+
+  .champion-card {
+    background-color: rgba(0, 0, 0, 0.8); /* Card background color */
+    border-radius: 2px; /* Rounded corners for the cards */
+    overflow: hidden; /* Ensure content doesn't overflow the card */
+    box-shadow: 0px 0px 10px #B0BEC5; /* Shadow around the cards */
+
+    transition: transform 0.2s; /* Smooth scaling transition on hover */
+  }
+
+  .champion-card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Ensure the images fit within the cards */
+  .champion-card img {
+    width: 100%;
+    height: auto;
+    display: block; /* Display images as block elements */
+  } 
+
+  .champion-info {
+    padding: 10px;
+    text-align: center; /* Center-align text */
+  }
+
+  .champion-info a {
+    margin: 10px 0 5px;
+    padding: 5px 10px;
+    width: 100px;
+    font-size: 18px;
+    background-color: rgba(194, 24, 91, 0.8);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    border-color: black;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.8) inset;
+    text-decoration: none;
+  }
+
+  .champion-info a:hover{
+    background-color: rgba(194, 24, 91, 1);
+    transform: scale(1.05);
+  }
+  
+  .champion-info p {
+    color: #B0BEC5;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+  }

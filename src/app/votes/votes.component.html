@@ -1,0 +1,15 @@
+<main>
+  <h1>Votes</h1>
+  <div id="content" >
+    <div class="champion-grid">
+      <div class="champion-card" *ngFor="let champion of votes">
+        <img [src]="'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/champion/' + champion.id + '.png'" alt="{{ champion.id }}">
+        <div class="champion-info">
+          <h2>{{ champion.id }}</h2>
+          <p><mat-icon>thumb_up</mat-icon> {{ champion.like }}</p>
+          <p><mat-icon>thumb_down</mat-icon> {{ champion.dislike }}</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+</main>
